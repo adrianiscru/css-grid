@@ -1,0 +1,327 @@
+/*
+* CSS Style
+* Copyright 2020, Adrian Iscru
+* www.adrian.iscru.net
+* Free to use under the MIT license.
+*/
+
+/* Base Structure
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 100%;
+}
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grid System
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.row:after,
+.col-:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    width: 100%;
+}
+
+/* Text Styles
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.text-justify{ text-align: justify; }
+
+.text-sm      { font-size: 1rem; }
+.text-md      { font-size: 1.6rem; }
+.text-lg      { font-size: 2.4rem; }
+.text-weight-1{ font-weight: 400; }
+.text-weight-2{ font-weight: 600; }
+.text-strike  { text-decoration: line-through; }
+
+/* Spacing
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 10px; }
+.ml-1 { margin-left: 10px; }
+.mr-1 { margin-right: 10px; }
+
+.pt-1 { padding-top: 12px;}
+.pb-1 { padding-bottom: 12px; }
+.pl-1 { padding-left: 12px; }
+.pr-1 { padding-right: 12px; }
+
+/* Borders
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bt-1 { border-top: 1px solid red; }
+.bb-1 { border-bottom: 1px solid red; }
+.bl-1 { border-left: 1px solid red; }
+.br-1 { border-right: 1px solid #dfdfdf; }
+
+/* Colors
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.cl-w { color: white; }
+.cl-b { color: black; }
+.cl-1 { color: orange; }
+.cl-2 { color: lightpink; }
+.cl-3 { color: yellow; }
+.cl-4 { color: lightcyan; } /* Last color declaration takes precedence */
+
+/* Background Colors
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bg-w { background-color: white; }
+.bg-b { background-color: black; }
+.bg-1 { background-color: orange; }
+.bg-2 { background-color: lightpink; }
+.bg-3 { background-color: yellow; }
+.bg-4 { background-color: lightcyan; }
+
+/* Buttons
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1.4em 2px;
+    cursor: pointer;
+    background-color: #e7e7e7; /* Default background color */
+    color: black; /* Default color */
+}
+
+.button-1 { background-color: #FDA428; }
+.button-2 { background-color: dodgerblue; }
+.button-3 { background-color: #f44336; }
+.button-4 { color: black; }
+.button-5 { background-color: #555555; }
+
+.button:hover { opacity: 0.8; }
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.input, textarea {
+    padding: 10px;
+    width: 100%;
+}
+
+textarea { min-height: 65px; }
+
+input[type="email"]:focus,
+input[type="name"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0; 
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ol { list-style: decimal inside; }
+
+.circle-list { list-style-type: circle; }
+.image-list { list-style-image: url('../-images/site/styled-list-icon.png'); }
+
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.coloured th {
+    color: white;
+    background-color: #2BB295;
+}
+
+/* Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.img-resp      { width: 100%; height: auto; }
+.img-thumb-s   { height: 100px; }
+.img-thumb-m   { height: 200px; }
+.img-thumb-l   { width: 300px; max-height: 400px; }
+
+/* Background Images
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.parallax, .cover {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Only for parallax */
+}
+
+#cover-1 { background-image: url('../-images/product/cover-1.png'); }
+#cover-2 { background-image: url('../-images/product/cover-2.png'); }
+#cover-3 { background-image: url('../-images/product/cover-3.png'); }
+
+/* Opacity
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.opac-1 { opacity: 0.8; transition-duration: 0.7s; }
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Use a mobile-first approach: Start with styles for mobile
+   and then override them for larger screens. */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    
+.div-center, .equal-col { width: 100%; }
+
+/* Display Rules
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.show-on-mobile { display: contents;}
+.show-on-mobile-and-tablet {display: contents;}
+.show-on-mobile-and-desktop {display: contents;}
+.show-on-tablet {display: none;}
+.show-on-tablet-and-desktop {display: none;}
+.show-on-desktop {display: none;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+.col-s-1 {width: 8.33%;}
+.col-s-2 {width: 16.66%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33%;}
+.col-s-5 {width: 41.66%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33%;}
+.col-s-8 {width: 66.66%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33%;}
+.col-s-11 {width: 91.66%;}
+.col-s-12 {width: 100%;}
+    
+.div-center {width: 75%; margin: auto;}
+
+/* Display Rules
+–––––––––––––––––––––––––––––––––––––––––––––––––– */   
+.show-on-mobile { display: none;}
+.show-on-mobile-and-tablet {display: contents;}
+.show-on-mobile-and-desktop {display: none;}
+.show-on-tablet {display: contents;}
+.show-on-tablet-and-desktop {display: contents;}
+.show-on-desktop {display: none;}
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+.col-m-1 {width: 8.33%;}
+.col-m-2 {width: 16.66%;}
+.col-m-3 {width: 25%;}
+.col-m-4 {width: 33.33%;}
+.col-m-5 {width: 41.66%;}
+.col-m-6 {width: 50%;}
+.col-m-7 {width: 58.33%;}
+.col-m-8 {width: 66.66%;}
+.col-m-9 {width: 75%;}
+.col-m-10 {width: 83.33%;}
+.col-m-11 {width: 91.66%;}
+.col-m-12 {width: 100%;}
+
+/* Display Rules
+–––––––––––––––––––––––––––––––––––––––––––––––––– */   
+.show-on-mobile { display: none;}
+.show-on-mobile-and-tablet {display: contents;}
+.show-on-mobile-and-desktop {display: none;}
+.show-on-tablet {display: contents;}
+.show-on-tablet-and-desktop {display: contents;}
+.show-on-desktop {display: none;}
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+.col-l-1 {width: 8.33%;}
+.col-l-2 {width: 16.66%;}
+.col-l-3 {width: 25%;}
+.col-l-4 {width: 33.33%;}
+.col-l-5 {width: 41.66%;}
+.col-l-6 {width: 50%;}
+.col-l-7 {width: 58.33%;}
+.col-l-8 {width: 66.66%;}
+.col-l-9 {width: 75%;}
+.col-l-10 {width: 83.33%;}
+.col-l-11 {width: 91.66%;}
+.col-l-12 {width: 100%;}
+ 
+ /* Display Rules
+–––––––––––––––––––––––––––––––––––––––––––––––––– */   
+.show-on-mobile { display: none;}
+.show-on-mobile-and-tablet {display: none;}
+.show-on-mobile-and-desktop {display: contents;}
+.show-on-tablet {display: none;}
+.show-on-tablet-and-desktop {display: contents;}
+.show-on-desktop {display: contents;}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .example::after { content: " Min 1200px"; }
+    /* … other styles … */
+}
+
+/* Footer Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer ul li {
+    text-decoration: underline;
+    line-height: 1;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #AAA;
+    padding: .5em;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #FFF;
+}
+
+/* Navigation Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.navigation {
+    /* styles */
+}
+
+/* ... Other specific or component-based styles ... */
+

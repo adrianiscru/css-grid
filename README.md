@@ -1,0 +1,2 @@
+# documentation
+This document provides detailed information about the CSS grid system and styling conventions used in the given stylesheet. Created by Adrian Iscru, this stylesheet provides a responsive grid system with additional utility classes for typography, spacing, colors, and other UI components. This CSS is free to use under the MIT license. More information can be found at adrian.iscru.net.
